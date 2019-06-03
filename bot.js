@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "$"
-var adminprefix = '$'
+var prefix = "e"
+var adminprefix = 'e'
 
 
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("$obc")) {
+    if (message.content.startsWith("eobc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "$";
+  var prefix = "e";
 
   client.on("message", message => {
   
@@ -56,8 +56,8 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('$adminbc')){
-if(!message.author.id === '476185102922285066') return;
+if (message.content.startsWith('eadminbc')){
+if(!message.author.id === '556990760659058728') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
@@ -66,23 +66,23 @@ m.sendMessage(args)
 });
 
   client.on('message', msg => {
-    if(msg.content === '$help')
+    if(msg.content === 'ehelp')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
   
   client.on("message", message => {
-    if (message.content === "$help") {
+    if (message.content === "ehelp") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       $obc | لأرسال برود كاست للكل
+       eobc | لأرسال برود كاست للكل
 
-       $bc  |  لأرسال برود كاست للأونلاين
+       ebc  |  لأرسال برود كاست للأونلاين
 
-       $adminbc | برودكاست عادي
+       eadminbc | برودكاست عادي
 
        ** `)
    message.author.sendEmbed(embed)
@@ -90,7 +90,7 @@ m.sendMessage(args)
    }
    });
 
-const developers = ["472413769700474901","id"]
+const developers = ["556990760659058728","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
